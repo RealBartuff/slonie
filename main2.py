@@ -6,6 +6,8 @@ with open(sys.argv[1]) as file:
     kol1 = file.readline()
     kol2 = file.readline()
 
-wagi_nowe = wagi.split(" ")
-
-print(min(wagi_nowe))
+wagi_lista = wagi.split(" ")
+kol1_lista = kol1.split(" ")
+kol2_lista = kol2.split(" ")
+zwazone_slonie = {}
+for slon in range(int(wagi_lista)):
