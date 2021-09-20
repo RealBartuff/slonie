@@ -1,31 +1,33 @@
 
 inf = 1000000000
 maxn = 1000000
-perm = []
-vis = []
-
-minw = int()
-
-a = int()
-nr = int()
-pocz = int()
-cur = int()
-dl = int()
+vis = list(range(0, maxn - 1))
+minw = 0
+pocz = 0
+cur = 0
+dl = 0
+suma = 0
 wynik = 0
-suma = int()
-minc = int()
+minc = 0
+
+
 
 with open("zadanie_B/slo1.in") as file:
+    a = 0
+    nr = 0
     n = file.readline()
+    wagi = file.readline().split(" ")
+    wagi = list(map(int, wagi))
+    orig = file.readline().split(" ")
+    orig = list(map(int, orig))
+    perm = file.readline().split(" ")
+    perm = list(map(int, perm))
     for a in range(0, (int(n) - 1) + 1):
-        wagi = file.readline().split(" ")
         if int(wagi[a - 1]) < minw:
             minw = wagi[a - 1]
     for a in range(0, (int(n) - 1) + 1):
-        orig = file.readline().split(" ")
         orig[a - 1] -= 1
     for a in range(0, (int(n) - 1) + 1):
-        perm = file.readline().split(" ")
         for nr in perm:
             nr -= 1
             perm[int(nr) - 1] = orig[a - 1]
@@ -38,7 +40,7 @@ with open("zadanie_B/slo1.in") as file:
             cur = pocz
             dl = 0
             while True:
-                if wagi[cur] < str(minc):
+                if wagi[cur] < minc:
                     minc = wagi[cur]
                 suma = suma + int(wagi[cur])
                 cur = perm[cur]
