@@ -1,2 +1,2 @@
 # slonie
-Zadanie testowe ImpiCode
+Zadanie testowe Random Forest
