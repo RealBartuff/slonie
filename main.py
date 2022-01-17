@@ -1,6 +1,12 @@
-print("1\r 2\r 3\r 4\r 50\r 700\r 62")
-message = "nowa wiadomość"
-print(message)
-message = 2
+# ASCII by Barłomiej Dębowski
 
-print(message)
+print("*************************")
+print("*  Create a frame!      *")
+print("*           __     __   *")
+print("*          /  \~~~/  \  *")
+print("*    ,----(     ..    ) *")
+print("*   /      \__     __/  *")
+print("*  /|         (\  |(    *")
+print("* ^  \  /___\  /\ |     *")
+print("*    |__|   |__|-..     *")
+print("*************************")
